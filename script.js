@@ -6,7 +6,7 @@ gsap.to(".row1", {
     trigger: "#main",
     scrub: 2,
     start: "1vh top",
-    markers: true,
+    // markers: true,
     pin: true,
   },
 });
@@ -16,7 +16,7 @@ gsap.to(".row2", {
   scrollTrigger: {
     trigger: "#main",
     scrub: 2,
-    markers: true,
+    // markers: true,
     pin: true,
   },
 });

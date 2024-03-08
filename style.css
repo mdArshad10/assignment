@@ -47,3 +47,43 @@ body {
   transform: scale(1.1);
   transition: transform 0.2s ease-in-out;
 }
+
+/* =========================================== */
+
+.grid {
+  display: grid;
+  height: 100vh;
+  padding: 5vh;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  background-color: red;
+}
+
+.cell {
+  padding: 20px;
+  background-color: black;
+  text-align: center;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.cell:hover {
+  transform: scale(1.1);
+  transition: transform 0.4s ease-in-out;
+  background-color: #d3d3d3;
+  cursor: pointer;
+}
+
+.cell::after {
+  content: attr(data-message);
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cell:hover::after {
+  opacity: 1;
+}
